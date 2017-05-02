@@ -1,3 +1,5 @@
+var animatePoints = function() {
+    
 var points = document.getElementsByClassName('point');
  
                  var revealFirstPoint = function() {

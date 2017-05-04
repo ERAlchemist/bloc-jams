@@ -28,16 +28,12 @@
  
  .selling-points {
      position: relative;
-
+}
  .point {
      position: relative;
      padding: 2rem;
      text-align: center;
-<<<<<<< HEAD
      opacity: 0;
-=======
-      opacity: 0;
->>>>>>> assignment-8-DOM
      -webkit-transform: scaleX(0.9) translateY(3rem);
      -moz-transform: scaleX(0.9) translateY(3rem);
      transform: scaleX(0.9) translateY(3rem);
@@ -46,13 +42,9 @@
      transition: all 0.25s ease-in-out;
      -webkit-transition-delay: 0.2s;
      -moz-transition-delay: 0.2s;
-<<<<<<< HEAD
      transition-delay: 0.2s;
-=======
-     transition-delay: 0.2s
->>>>>>> assignment-8-DOM
- }
- 
+}
+     
  .point .point-title {
      font-size: 1.25rem;
  }

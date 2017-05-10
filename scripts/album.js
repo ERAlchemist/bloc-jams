@@ -29,6 +29,21 @@
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+
+var albumSangio = {
+     title: 'Fate',
+     artist: 'Sangiovese',
+     label: 'Vino',
+     year: '1945',
+     albumArtUrl: 'assets/images/album_covers/06.png',
+     songs: [
+         { title: 'Noir', duration: '4:31' },
+         { title: 'Blanc', duration: '3:45' },
+         { title: 'Chianti', duration: '5:04' },
+         { title: 'Rose', duration: '3:55'},
+         { title: 'Cabernet', duration: '2:44'}
+     ]
+ };
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -41,13 +56,16 @@
      return template;
  };
 
-var setCurrentAlbum = function(album) {
-     // #1
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
      var albumArtist = document.getElementsByClassName('album-view-artist')[0];
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
      var albumImage = document.getElementsByClassName('album-cover-art')[0];
      var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
+
+var setCurrentAlbum = function(album) {
+  
+     
  
      // #2
      albumTitle.firstChild.nodeValue = album.title;
@@ -66,4 +84,17 @@ var setCurrentAlbum = function(album) {
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     
+     var albums = [albumMarconi, albumSangio, albumPicasso];
+     
+     var index = 0;
+     
+     albumImage.addEventListener("click", function(event){
+                                 
+     setCurrentAlbum(albums[index]); 
+     index++;
+     if(index == albums.length){
+         index = 0;
+     }
+                                 });
  };

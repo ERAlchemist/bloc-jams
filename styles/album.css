@@ -4,6 +4,7 @@ body.album {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover; /* what does this do? */ 
+    padding-bottom: 200px;
 }
  .album-cover-art {
      position: relative;
@@ -106,4 +107,49 @@ song-item-duration {
          width: 80%;
          margin: auto;
      }
+ }
+.player-bar {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 200px;
+     background-color: rgba(255, 255, 255, 0.3);
+     z-index: 100;
+ }
+ 
+ .player-bar a,
+ .player-bar a:hover {
+     color: white;
+     cursor: pointer;
+     text-decoration: none;
+ }
+ 
+ .player-bar .container {
+     display: table;
+     padding: 0;
+     width: 90%;
+     min-height: 100%;
+ }
+ 
+ .player-bar .control-group {
+     display: table-cell;
+     vertical-align: middle;
+ }
+ 
+ .player-bar .main-controls {
+     width: 25%;
+     text-align: left;
+     padding-right: 1rem;
+ }
+ 
+ .player-bar .currently-playing {
+     width: 50%;
+     text-align: center;
+     position: relative;
+ }
+ 
+ .player-bar .volume {
+     width: 25%;
+     text-align: right;
  }

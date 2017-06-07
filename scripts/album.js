@@ -36,7 +36,7 @@
      
     var onHover = function(event) {
        //get song item number element
-        var songItemNumber = parseInt($(this).find(".song-item-number"));
+        var songItemNumber = $(this).find(".song-item-number");
         //get data-song-number from element
         var number = parseInt(songItemNumber.attr("data-song-number"));
         
@@ -48,7 +48,7 @@
      };
      var offHover = function(event) {
          //get song item number element
-        var songItemNumber = parseInt($(this).find(".song-item-number"));
+        var songItemNumber = $(this).find(".song-item-number");
         //get data-song-number from element
         var number = parseInt(songItemNumber.attr("data-song-number"));
           //if data-song-number is  currently playing 
@@ -184,7 +184,7 @@ var updatePlayerBarSong = function() {
      
  
 
-     var albums = [albumMarconi, albumSangio, albumPicasso];
+     /*var albums = [albumMarconi, albumSangio, albumPicasso];
      
      var index = 0;
      
@@ -195,6 +195,6 @@ var updatePlayerBarSong = function() {
      if(index == albums.length){
          index = 0;
      }
-                                 });
+                                 });*/ 
  });
 
